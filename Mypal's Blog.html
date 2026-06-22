@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lovable Mypal</title>
+  <style>
+    :root {
+      --primary: #1a73e8;
+      --bg: #f5f5f7;
+      --text: #333;
+    }
+    body {
+      margin: 0; font-family: 'Inter', sans-serif;
+      color: brown; background:seagreen;
+      display: grid; grid-template-rows: auto 1fr auto;
+      min-height: 100vh;
+    }
+    header {
+      padding: 2rem;
+      background: cadetblue;
+      color: white; text-align: center;
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    }
+    main {
+      padding: 2rem;
+      display: grid; gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .feature-card {
+      position: relative;
+          padding: 2rem;
+      background: lightcyan; border-radius: 16px;
+      overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      display: block; flex-direction: column;
+      transition: transform .3s;
+    }
+    .feature-card:hover {
+      transform: translateY(-50px);
+    }
+    .feature-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: conic-gradient(rosybrown);
+      mix-blend-mode: multiply;
+      opacity: 0; transition: opacity .5s;
+      border-radius: 16px;
+    }
+    .feature-card:hover::before {
+      opacity: .5;
+    }
+    .feature-card h2 {
+      margin-top: 0; z-index:1;
+    }
+    footer {
+      padding: 1rem; text-align: center;
+      background: saddlebrown; color: white;
+      font-size: .9rem;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition: none !important;
+        animation: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Mypal's Blog</h1>
+    <p>Short Stories and Daily life of Mypal</p>
+  </header>
+       
+  <main>
+    <section class="feature-card">
+      <h2>Who is Mypal?</h2>
+      <h4>Mypal is a raccoon keeping old operating systems alive with his cuteness overload. </h4>
+      <img src= https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapers.com%2Fimages%2Fhd%2Fcute-raccoon-pictures-4lvr7908ffui3n81.jpg&f=1&nofb=1&ipt=d9f5b275fa736969cf111916e72e61e0ff8ce0da71fa393aae1834e96de72836.png Width = 255 Height = 200</p>
+    </section>
+    <section class="feature-card">
+      <h2>Hiding in a trashcan</h2>
+      <h4> One day Mypal had to go to school. His mother wanted him to bathe, but Mypal didn't want to. So, Mypal hid in a bin just to avoid it and when his mother found him, he looked at her so innocently his mother's heart immediately melted.  </h4>
+      <img src=https://imgs.search.brave.com/crvkMmyjbxL0TTT4VhzgDql9bYkRVB_jA4HD-vF-I-4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMuYm9yZWRwYW5k/YS5jb20vYmxvZy93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyMS8w/OC9mdW5ueS1nb29m/eS1yYWNvb25zLXBp/Y3MtcmFjY29vbmNv/cmUtNjExYTE0MjI0/YmFlYV9fNzAwLmpw/Zw Width = 240 Height = 275</p>
+
+    </section>
+    <section class="feature-card">
+    <h2>Falling off the Stairs</h2>
+    <h4>One day, Mypal didn't want to go to school. His mother was annoyed with the fact that Mypal kept skipping school. So Mypal tried to run away from his mother. While doing so, he accidentally fell off the stairs! <h4>
+              <img src= https://imgs.search.brave.com/2IwUFk-5u161nbQP72w_cqO1_YwXcXjYAdbJIxl_hYE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMuYm9yZWRwYW5k/YS5jb20vYmxvZy93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyMS8w/OC9mdW5ueS1nb29m/eS1yYWNvb25zLXBp/Y3MtcmFjY29vbmNv/cmUtNjExYTFhMjQx/ZWNiY19fNzAwLmpw/Zw Width = 255</p>
+         
+          </section>
+          <section class= "feature-card">
+                 <h2>Mother, Mypal is Hungry!</h2>
+                      <h4>One day, Mypal sat to eat. He saw his favourite food cakes, strawberries and blueberries. Mypal immediately started eating during which he looked so cute, it felt like he deserved a hug! </h4>
+                            <img src= https://imgs.search.brave.com/Ne6BI11K7a1GvY7kttHuEW2-KngG1lvDR2lFYwU5VU8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMuYm9yZWRwYW5k/YS5jb20vYmxvZy93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyMS8w/OC9mdW5ueS1nb29m/eS1yYWNvb25zLXBp/Y3MtcmFjY29vbmNv/cmUtNjExYTE3NGIw/OTU0ZF9fNzAwLmpw/Zw Width = 255
+         
+
+          </main>
+               </section>
+          <section class= "feature-card">
+                 <h2>At Dawn We Ride</h2>
+                      <h4>One day, Mypal woke up in the evening and found a toy. He really liked that toy. So he started playing with it while drinking chocolate milkshake. Then accidentally, Mypal put too much pressure on the toy and he later fell down with the chocolate milkshake splashing and getting smeared on his face!</h4> 
+               <img src= https://imgs.search.brave.com/nrONmQGE07GJbGRtZpMCID2aH2UezcK9VOzjZT1FCrk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMuYm9yZWRwYW5k/YS5jb20vYmxvZy93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyMS8w/OC9mdW5ueS1nb29m/eS1yYWNvb25zLXBp/Y3MtcmFjY29vbmNv/cmUtNjExYTE2ZWMy/ZGQyY19fNzAwLmpw/Zw Width = 255
+                   </main>
+        
+
+            </section>
+           <section class= "feature-card">
+                 <h2>Pretty Girl!</h2>
+                      <h4>One day, Mypal came to the garden to play with his friends. One of his friends made a flower garland for his head, Mypal liked it so much he wore it for the entire day! </h4> 
+               <img src= https://static.boredpanda.com/blog/wp-content/uploads/2021/08/clipimage-611a0f1d83f5d__700.jpg Width = 255 
+                   </main>
+
+                </section>
+           <section class= "feature-card">
+                 <h2>Ready for Winter!</h2>
+                      <h4>One day, on Christmas Eve, Mypal wore a cute winter dress. Mypal's mother loved it and kissed him. Mypal said, 'Mommy, where are the cookies?', to which she replied 'In the cupboard, dear!'         
+                          <img src= https://static.boredpanda.com/blog/wp-content/uploads/2021/08/clipimage-611a0de7d6bc7__700.jpg Width = 275 Height = 275
+                   </main>
+               
+
+                </section>
+           <section class= "feature-card">
+                 <h2>Stay Away From My Son!</h2>
+                      <h4>One day, Mypal came close to a horrifying encounter. A poacher tried to kidnap him and take him away. Mypal became afraid. Mypal's mother came in to protect her baby from the poacher. </h4> 
+               <img src = https://static.boredpanda.com/blog/wp-content/uploads/2021/08/funny-goofy-racoons-pics-raccooncore-611a13cca6189__700.jpg Width = 255
+                   </main>
+
+             
+                    
+    </main>
+  <footer>
+    © 2025 Mypal.com • Built on Mypal's affection. All Images belong to their respective owners.
+  </footer>
+</body>
+</html>
