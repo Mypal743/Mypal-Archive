@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mypal</title>
+    <style>
+        :root {
+            --bg: lightcoral;
+            --text: #222222;
+            --accent: #6c5ce7;
+            --card-bg: #f5f5f5;
+        }
+
+        body.dark {
+            --bg: darkcyan;
+            --text: #f5f5f5;
+            --accent: #a29bfe;
+            --card-bg: #2a2a2a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: beige; /* Beige */
+            padding: 2rem;
+            text-align: center;
+            color: #222; /* Dark text color */
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            color: #222; /* Dark title text */
+        }
+
+        header p {
+            color: #555; /* Slightly lighter text for the paragraph */
+        }
+
+        .toggle-mode {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rosybrown ;
+            color: #333;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: lightsteelblue;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card.expanded {
+            background: var(--accent);
+            color: white;
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+        }
+
+        .modal {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-content {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+        }
+
+        .modal-content h2 {
+            margin-bottom: 1rem;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: crimson;
+            color: white;
+            border: none;
+            padding: 0.3rem 0.7rem;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Mypal Installation Guide</h2>
+        <h4>Ways to install Mypal Browser</h4>
+        <button class="toggle-mode">Dark Mode</button>
+    </header>
+
+    <main class="container">
+        <div class="card" onclick="expandCard(this)">
+            <h3>Windows XP</h3>
+            <h4>
+Visit the Official Website or GitHub:
+Go to the MyPal browser's official website or its GitHub page to find the latest version available for download.
+Run the Installer:
+After downloading, locate the installer file on your computer and double-click it to start the installation process.
+Follow On-Screen Instructions;
+Proceed through the installation wizard by following the prompts. This typically includes agreeing to the terms of service and selecting the installation directory.
+Once the installation is finished, you can launch MyPal from your desktop or start menu.
+Additional Information
+Compatibility: MyPal is specifically designed for Windows XP, making it a suitable choice for older systems that cannot run modern browsers.
+Updates: Ensure to check for updates regularly to keep your browser secure and functional.</h4>
+
+            
+        </div>
+        <main class="container">
+        <div class="card" onclick="expandCard(this)">
+            <h3>Windows 2000</h3>
+            <h4>
+A version of Mypal 68 can be run natively on Windows 2000 by installing Sp4 and Update Rollup 1 via legacy update. Refer to the same steps as Windows XP for installation.</h4>
+            <a href="https://www.threads.com/@thebobpony/post/DWHwD_nEcSu/new-moon-and-my-pal-backported-to-work-on-windows-requires-sp-and-update-rollup">Click here</a>
+        </div>
+        <main class="container">
+        <div class="card" onclick="expandCard(this)">
+            <h3>Windows 98 and ME</h3>
+            <h4>
+For Windows 98 and ME, you can refer to this video by 
+ivyflow3r -  <a href="https://www.youtube.com/watch?v=4z-Ks5msuR4">Click here</a>
+            </h4>
+        </div>           
+        
+        <div class="card" onclick="expandCard(this)">
+                <h3>Contact</h3>
+            <h4>Got questions? <a href="https://github.com/Feodor2/Mypal68/releases" style="color: var(--primary-color);">Visit the Mypal Github Page</a> and enjoy browsing!</h4>
+
+
+    <script>
+        function expandCard(card) {
+            // Collapse others
+            document.querySelectorAll('.card').forEach(c => {
+                if (c !== card) c.classList.remove('expanded');
+            });
+            card.classList.toggle('expanded');
+        }
+
+        function openModal() {
+            document.getElementById('modalTitle').textContent = 'Card Four';
+            document.getElementById('modalText').innerHTML =
+                "I'm a developer looking forward to create websites which discourage disquietude and trepidation. I've burned the midnight oil into making this so I hope you enjoy it as well! Robotics and Mechatronics are also one of my most favourite recreational things to do alongside coding. I've also created a Code-a-Editor and a duplicate of Perplexity AI if you want to try them out. I also like Artificial Intelligence. Feel free to question any of the actions partaken here.";
+            document.getElementById('modal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.remove('active');
+        }
+
+        document.querySelector('.toggle-mode').addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            const isDark = document.body.classList.contains('dark');
+            document.querySelector('.toggle-mode').textContent = isDark ? 'Light Mode' : 'Dark Mode';
+        });
+    </script>
+</body>
+</html>
+

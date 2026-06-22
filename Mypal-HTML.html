@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lovable Mypal</title>
+  <style>
+    :root {
+      --primary: #1a73e8;
+      --bg: #f5f5f7;
+      --text: #333;
+    }
+    body {
+      margin: 0; font-family: 'Inter', sans-serif;
+      color: brown; background: lightcoral;
+      display: grid; grid-template-rows: auto 1fr auto;
+      min-height: 100vh;
+    }
+    header {
+      padding: 2rem;
+      background: saddlebrown;
+      color: white; text-align: center;
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    }
+    main {
+      padding: 2rem;
+      display: grid; gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .feature-card {
+      position: relative;
+          padding: 2rem;
+      background: sandybrown; border-radius: 16px;
+      overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      display: block; flex-direction: column;
+      transition: transform .3s;
+    }
+    .feature-card:hover {
+      transform: translateY(-50px);
+    }
+    .feature-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: conic-gradient(rosybrown);
+      mix-blend-mode: multiply;
+      opacity: 0; transition: opacity .5s;
+      border-radius: 16px;
+    }
+    .feature-card:hover::before {
+      opacity: .5;
+    }
+    .feature-card h2 {
+      margin-top: 0; z-index:1;
+    }
+    footer {
+      padding: 1rem; text-align: center;
+      background: saddlebrown; color: white;
+      font-size: .9rem;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition: none !important;
+        animation: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Mypal's Home</h1>
+    <p>The World's Cutest Raccoon</p>
+  </header>
+       
+  <main>
+    <section class="feature-card">
+      <h2>Who is Mypal?</h2>
+      <h4>Mypal is a raccoon keeping old operating systems alive with his cuteness overload. </h4>
+      <img src= https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapers.com%2Fimages%2Fhd%2Fcute-raccoon-pictures-4lvr7908ffui3n81.jpg&f=1&nofb=1&ipt=d9f5b275fa736969cf111916e72e61e0ff8ce0da71fa393aae1834e96de72836.png Width = 255 Height = 200</p>
+    </section>
+    <section class="feature-card">
+      <h2>Love Mypal?</h2>
+      <h4> He is adorable! </h4>
+      <img src= https://static.boredpanda.com/blog/wp-content/uploads/2021/08/funny-goofy-racoons-pics-raccooncore-611a16ec2dd2c__700.jpg Width = 255 Height = 300</p>
+
+    </section>
+    <section class="feature-card">
+    <h2>Make sure to help Mypal with his future pursuits.</h2>
+    <h4>Your help is much needed!<h4>
+              <img src= https://imgs.search.brave.com/Ne6BI11K7a1GvY7kttHuEW2-KngG1lvDR2lFYwU5VU8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMuYm9yZWRwYW5k/YS5jb20vYmxvZy93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyMS8w/OC9mdW5ueS1nb29m/eS1yYWNvb25zLXBp/Y3MtcmFjY29vbmNv/cmUtNjExYTE3NGIw/OTU0ZF9fNzAwLmpw/Zw Width = 255</p>
+         
+          </section>
+          <section class= "feature-card">
+                 <h2>Thanks!</h2>
+                      <h4>Thank you Feodor2! For such an amazing raccoon. </h4>
+                            <img src= https://imgs.search.brave.com/x05ftPqdE6uQ6Ayy1Jvjvu27XLD98QIXS53_pRyE1w0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMuYm9yZWRwYW5k/YS5jb20vYmxvZy93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyMS8w/OC9mdW5ueS1nb29m/eS1yYWNvb25zLXBp/Y3MtcmFjY29vbmNv/cmUtNjExYTE3YmFi/YWY4OF9fNzAwLmpw/Zw Width = 255</p
+          </div>
+              
+          </section>
+          <section class="likes-section">
+           <h2>Things Mypal likes</h2>
+          <ul> 
+           <li>Playing with toys</li>
+           <li>Reading Nursery Books</li>
+           <li>Being decorated with pretty flowers</li>
+           <li>Being adorable</li>
+              </ul>
+          </div>
+              
+        <img src=https://wallpapers.com/images/hd/cute-raccoon-pictures-f1qmkqhhxeghbv1d.jpg Width = 304  /p
+
+          </main>
+               </section>
+          <section class= "feature-card">
+                 <h2>Help, Support Mypal!</h2>
+                      <h4>Mypal needs your help! Please contribute by spreading awareness by reading our ebook. 
+                      Mypal usage has been diminishing as many better and more advanced browsers are being made. Please, do use Mypal to save the raccoon.
+                      Special thanks to Feodor2 for giving us such an amazing browser! May Mypal live forver.</h4> 
+               </div>
+              
+          </section>
+          <section class="likes-section">
+               <h2>Citations</h2>
+          <ul> 
+           <li>All images belong to their respective owners</li>
+              </ul>
+          </div>
+
+              <img src=https://static.boredpanda.com/blog/wp-content/uploads/2021/08/clipimage-611a0f1d83f5d__700.jpg Width = 303 Height= 400
+                    
+    </main>
+  <footer>
+    © 2025 Mypal.com • Built on Mypal's affection
+  </footer>
+</body>
+</html>
